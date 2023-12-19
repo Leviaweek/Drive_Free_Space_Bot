@@ -43,8 +43,12 @@ public static class Program
                 foreach (var disk in disks)
                 {
                     var name = disk.Name;
-                    if (!name.StartsWith("/sys/") && !name.StartsWith("/run/"))
-                        str.AppendLine($"{disk.Name}: {Math.Round((float)disk.AvailableFreeSpace / disk.TotalSize * 100, 2)}%");
+                    if (name.StartsWith("/sys/") && name.StartsWith("/run/")) 
+                        continue;
+                    var diskSpacePercent = Math.Round((double)disk.AvailableFreeSpace / disk.TotalSize * 100, 2);
+                    if (double.IsNaN(diskSpacePercent))
+                        continue;
+                    str.AppendLine($"{disk.Name}: {diskSpacePercent}%");
                 }
 
                 await botClient.SendMessageAsync(str.ToString(), token);
