@@ -4,8 +4,8 @@ namespace FreeSpacePercentBot;
 
 public class TelegramBotRequest
 {
-    [JsonPropertyName("chatId")]
+    [JsonPropertyName("chat_id")]
     public required long ChatId { get; set; }
-    [JsonPropertyName("message")]
+    [JsonPropertyName("text")]
     public required string Message { get; set; }
 }

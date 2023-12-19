@@ -29,7 +29,8 @@ public class TelegramBotClient
         var response = await httpClient.PostAsync(apiUrl, content, cancellationToken);
         if (response.StatusCode != HttpStatusCode.OK)
         {
-            Console.WriteLine("Error sending message {0} to chat {1}", message, _chatId);
+            Console.WriteLine("Error sending message to chat {0}", _chatId);
+            Console.WriteLine($"HttpErrorCode {(int)response.StatusCode}");
             return;
         }
         Console.WriteLine("Message sent to chat {0}", _chatId);
