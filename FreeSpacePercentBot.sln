@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSpacePercentBot", "FreeSpacePercentBot\FreeSpacePercentBot.csproj", "{3D59D1E7-A19D-4F67-ACBA-B6EFB4655AAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D59D1E7-A19D-4F67-ACBA-B6EFB4655AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D59D1E7-A19D-4F67-ACBA-B6EFB4655AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D59D1E7-A19D-4F67-ACBA-B6EFB4655AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D59D1E7-A19D-4F67-ACBA-B6EFB4655AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
