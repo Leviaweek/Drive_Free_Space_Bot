@@ -41,7 +41,7 @@ public static class Program
                     var name = disk.Name;
                     if (name.StartsWith("/sys/") || name.StartsWith("/run/") || name.StartsWith("/var")) 
                         continue;
-                    var diskSpacePercent = Math.Round((double)disk.AvailableFreeSpace / disk.TotalSize * 100, 2);
+                    var diskSpacePercent = Math.Round((double)disk.TotalFreeSpace / disk.TotalSize * 100, 2);
                     if (double.IsNaN(diskSpacePercent))
                         continue;
                     str.AppendLine($"{disk.Name}: {diskSpacePercent}%");
