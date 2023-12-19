@@ -1,9 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Net;
+﻿using System.Net;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace FreeSpacePercentBot;
 
@@ -43,7 +39,7 @@ public static class Program
                 foreach (var disk in disks)
                 {
                     var name = disk.Name;
-                    if (name.StartsWith("/sys/") && name.StartsWith("/run/")) 
+                    if (name.StartsWith("/sys/") || name.StartsWith("/run/") || name.StartsWith("/var")) 
                         continue;
                     var diskSpacePercent = Math.Round((double)disk.AvailableFreeSpace / disk.TotalSize * 100, 2);
                     if (double.IsNaN(diskSpacePercent))
